@@ -18,6 +18,7 @@ To add this module to your configuration, add the `:duct-migrations-auto-cfg/mod
 {:duct-migrations-auto-cfg/module {}
  :duct.module/sql {:database-url "jdbc:sqlite:"}}
 ```
+
 It will fill in migrations from `migrations` or `resources/migrations` folder
 
 Or
@@ -30,12 +31,14 @@ Or
 
 It will fill in migrations from `my-project/migrations` or `resources/my-project/migrations` folder
 
-Or
+Or you can specify custom path
 
 ```clojure
-{:duct-migrations-auto-cfg/module {}
+{:duct-migrations-auto-cfg/module {:migrations-path "my_custom_path"}
  :duct.module/sql {:database-url "jdbc:sqlite:"}}
 ```
+
+It will fill in migrations from your custom path
 
 ## License
 
